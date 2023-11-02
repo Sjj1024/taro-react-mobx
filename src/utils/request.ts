@@ -1,6 +1,6 @@
 import Taro from '@tarojs/taro';
 
-const TIME_OUT = 60000;
+const TIME_OUT = 6000;
 const BASE_URL = 'http://api.hado-official.cn:8087';
 
 const request = (options) => {
