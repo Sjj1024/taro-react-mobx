@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { View, Button, Text } from '@tarojs/components';
+import { View, Button } from '@tarojs/components';
 import { observer } from 'mobx-react';
 import Store from '../../store';
 import IndexApi from '../../apis/index';
@@ -35,9 +35,11 @@ function Index() {
 
   return (
     <View>
-      <Text>
-        函数组件状态：{count} || mobx中的状态: {counterStore.counter}
-      </Text>
+      <View className='box'>函数组件状态：{count}</View>
+      <View className='box'>mobx中的状态: {counterStore.counter}</View>
+      <Button type='primary' onClick={() => handleClick()}>
+        修改
+      </Button>
       <Button onClick={() => handleClick()}>+1</Button>
     </View>
   );
